@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Nick Kossifidis</author>
+ <class>IntCheckerOptionsPage</class>
+ <widget class="QWidget" name="IntCheckerOptionsPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>677</width>
+    <height>563</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Integrity Checker</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="TopGBox">
+     <property name="title">
+      <string>Integrity Checker</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>12</number>
+      </property>
+      <property name="bottomMargin">
+       <number>12</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="MP3GBox">
+        <property name="title">
+         <string>MP3 Settings</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="1" column="4">
+          <widget class="QSpinBox" name="mp3_min_brate">
+           <property name="accelerated">
+            <bool>false</bool>
+           </property>
+           <property name="minimum">
+            <number>32</number>
+           </property>
+           <property name="maximum">
+            <number>320</number>
+           </property>
+           <property name="singleStep">
+            <number>8</number>
+           </property>
+           <property name="value">
+            <number>128</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" colspan="5">
+          <widget class="QLineEdit" name="mpck_path">
+           <property name="placeholderText">
+            <string>mpck</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="mp3_min_brate_label">
+           <property name="text">
+            <string>Minimum Bitrate:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="mpck_cmd_label">
+           <property name="text">
+            <string>Path to CheckMate (mpck):</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="mp3_srate_label">
+           <property name="text">
+            <string>Minimum Sampling rate:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="mp3_min_srate">
+           <property name="frame">
+            <bool>false</bool>
+           </property>
+           <property name="readOnly">
+            <bool>false</bool>
+           </property>
+           <property name="accelerated">
+            <bool>false</bool>
+           </property>
+           <property name="keyboardTracking">
+            <bool>true</bool>
+           </property>
+           <property name="showGroupSeparator" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="minimum">
+            <number>32000</number>
+           </property>
+           <property name="maximum">
+            <number>48000</number>
+           </property>
+           <property name="singleStep">
+            <number>100</number>
+           </property>
+           <property name="stepType">
+            <enum>QAbstractSpinBox::DefaultStepType</enum>
+           </property>
+           <property name="value">
+            <number>44100</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="5">
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="OGGGBox">
+        <property name="title">
+         <string>OGG Settings</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="1" column="4">
+          <widget class="QSpinBox" name="ogg_min_brate">
+           <property name="accelerated">
+            <bool>false</bool>
+           </property>
+           <property name="minimum">
+            <number>32</number>
+           </property>
+           <property name="maximum">
+            <number>500</number>
+           </property>
+           <property name="singleStep">
+            <number>16</number>
+           </property>
+           <property name="value">
+            <number>128</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="ogg_min_brate_label">
+           <property name="text">
+            <string>Minimum Bitrate:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="ogg_min_srate">
+           <property name="minimum">
+            <number>8000</number>
+           </property>
+           <property name="maximum">
+            <number>192000</number>
+           </property>
+           <property name="singleStep">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>44100</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="ogginfo_cmd_label">
+           <property name="text">
+            <string>Path to ogginfo:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="ogg_min_srate_label">
+           <property name="text">
+            <string>Minimum Sampling rate:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" colspan="5">
+          <widget class="QLineEdit" name="ogginfo_path">
+           <property name="placeholderText">
+            <string>ogginfo</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="5">
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="FLACGBox">
+        <property name="title">
+         <string>FLAC Settings</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="1" column="0">
+          <widget class="QLabel" name="flac_min_srate_label">
+           <property name="text">
+            <string>Minimum Sampling rate:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="flac_min_srate">
+           <property name="minimum">
+            <number>10</number>
+           </property>
+           <property name="maximum">
+            <number>655350</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+           <property name="value">
+            <number>44100</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <spacer name="flac_spacer2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>239</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="flac_cmd_label">
+           <property name="text">
+            <string>Path to flac (tool):</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <spacer name="flac_spacer1">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>115</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="1" colspan="3">
+          <widget class="QLineEdit" name="flac_path">
+           <property name="placeholderText">
+            <string>flac</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="WVGBox">
+        <property name="title">
+         <string>WavPack Settings</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="1" colspan="3">
+          <widget class="QLineEdit" name="wvunpack_path">
+           <property name="placeholderText">
+            <string>wvunpack</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="wavpack_min_srate_label">
+           <property name="text">
+            <string>Minimum Sampling rate:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <spacer name="wavpack_spacer2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>145</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="wavpack_min_srate">
+           <property name="minimum">
+            <number>10</number>
+           </property>
+           <property name="maximum">
+            <number>655350</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+           <property name="value">
+            <number>44100</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <spacer name="wavpack_spacer1">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>145</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="wvunpack_cmd_label">
+           <property name="text">
+            <string>Path to wvunpack:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
