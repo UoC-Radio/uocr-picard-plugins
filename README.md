@@ -45,5 +45,10 @@ and we also use the following Plugins as well (from Picard's repository):
 * Standardise Feat.
 * Compatible TXXX frames
 
+Finaly we want to also move various non-audio files to the Library such as artwork, informational texts, rip logs etc (Libguard will then sort them out in subfolders inside the album folder), so we also tell picard to grab such files as well, using the "Move aditional files" field:
+```
+*.jpg *.png *.tif *.JPG *.PNG *.txt *.TXT *.log *.accurip *.pdf lock ignore
+```
+the "lock" and "ignore" files are special, ignore tells Libguard to skip this folder/album, and lock tells picard (through the DuplicateChecker plugin) to not add any albums on the parent folder (e.g. for this artist / release).
 
 Note that [Library Guardian](https://github.com/UoC-Radio/libguard) takes care of ReplayGain tagging, and for moving artwork/media and album infos on subfolders, along with anything else we need that can be performed offline, after the album has been saved. [Library Guardian](https://github.com/UoC-Radio/libguard) also performs integrity checking just in case.
