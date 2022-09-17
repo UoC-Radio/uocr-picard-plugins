@@ -50,9 +50,9 @@ def integrity_check(infile):
 		filename = infile.filename
 		min_srate = int(tagger.config.setting[INTEGRITY_CHECKS[_format][2]])
 		if isinstance(INTEGRITY_CHECKS[_format][3], int):
-			min_brate = -1.0
+			min_brate = -1
 		else:
-			min_brate = float(tagger.config.setting[INTEGRITY_CHECKS[_format][3]])
+			min_brate = int(tagger.config.setting[INTEGRITY_CHECKS[_format][3]])
 
 		log.debug("[INTCHECKER] min_srate: %s, min_brate: %s", min_srate, min_brate)
 
@@ -111,10 +111,10 @@ class IntCheckerOptionsPage(OptionsPage):
 	options = [
 		TextOption("setting", "intchecker_mpck_path", "mpck"),
 		IntOption("setting", "intchecker_mp3_min_srate", 44100),
-		FloatOption("setting", "intchecker_mp3_min_brate", 128.0),
+		IntOption("setting", "intchecker_mp3_min_brate", 128),
 		TextOption("setting", "intchecker_ogginfo_path", "ogginfo"),
 		IntOption("setting", "intchecker_ogg_min_srate", 44100),
-		FloatOption("setting", "intchecker_ogg_min_brate", 128.0),
+		IntOption("setting", "intchecker_ogg_min_brate", 128),
 		TextOption("setting", "intchecker_flac_path", "flac"),
 		IntOption("setting", "intchecker_flac_min_srate", 44100),
 		TextOption("setting", "intchecker_wvunpack_path", "wvunpack"),
